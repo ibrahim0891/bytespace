@@ -19,19 +19,24 @@ export const HeroSearch = ({ onSearch, className = "" }: HeroSearchProps) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className={`w-full max-w-xl mx-auto bg-white rounded-full p-1.5 pl-5 flex items-center shadow-xl shadow-blue-900/10 transition-all focus-within:ring-4 focus-within:ring-white/20 ${className}`.trim()}
+      className={`w-full max-w-xl mx-auto flex items-center justify-center gap-3 sm:gap-4 ${className}`.trim()}
     >
-      <Search className="w-5 h-5 text-zinc-400 shrink-0 mr-3" />
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Course, topic, creator"
-        className="w-full bg-transparent text-sm text-zinc-800 placeholder:text-zinc-400 focus:outline-none font-sans"
-      />
+      {/* Separate Search Input Bar */}
+      <div className="flex-1 bg-white rounded-full px-5 py-3 flex items-center shadow-lg transition-all focus-within:ring-4 focus-within:ring-white/20">
+        <Search className="w-5 h-5 text-zinc-400 shrink-0 mr-3" />
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Course, topic, creator"
+          className="w-full bg-transparent text-sm sm:text-base text-zinc-800 placeholder:text-zinc-400 focus:outline-none font-sans"
+        />
+      </div>
+
+      {/* Separate Search Button */}
       <button
         type="submit"
-        className="shrink-0 bg-[#D4FF00] hover:bg-[#c2eb00] text-zinc-950 text-sm font-semibold px-6 py-2.5 rounded-full transition-transform active:scale-95 font-sans cursor-pointer"
+        className="shrink-0 bg-[#D4FF00] hover:bg-[#c2eb00] text-zinc-950 text-sm sm:text-base font-semibold px-7 py-3 rounded-full transition-transform active:scale-95 font-sans cursor-pointer shadow-lg"
       >
         Search
       </button>
