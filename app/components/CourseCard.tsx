@@ -46,7 +46,7 @@ export const CourseCard = ({
 }: CourseCardProps) => {
   return (
     <div
-      className={`group bg-white rounded-[28px] p-3.5 sm:p-4 border border-zinc-200 hover:border-zinc-300 transition-colors flex flex-col justify-between ${className}`.trim()}
+      className={`group bg-white rounded-[28px] p-3.5 sm:p-4 border border-zinc-200/50 hover:border-zinc-200 transition-colors flex flex-col justify-between ${className}`.trim()}
     >
       {/* Thumbnail Container with Badges */}
       <div>
