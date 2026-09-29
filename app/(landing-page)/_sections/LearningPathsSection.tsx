@@ -41,7 +41,7 @@ export const LearningPathsSection = () => {
         <section className="w-full bg-white py-10 sm:pb-15 sm:pt-0">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 {/* Section Heading */}
-                <H2 className="text-zinc-950 text-2xl sm:text-3xl md:text-4xl font-extrabold  ">
+                <H2 className="text-zinc-950 text-2xl sm:text-3xl md:text-4xl font-semibold  ">
                     Explore Diverse Learning Paths at Bytespace
                 </H2>
 

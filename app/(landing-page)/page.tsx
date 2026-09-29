@@ -18,8 +18,8 @@ export default function Home() {
       <FeaturedCoursesSection />
       <LearningPathsSection />
       <GrowthAndCreatorSection />
-      <TestimonialsSection />
       <CtaSection />
+      <TestimonialsSection />
       <Footer />
     </div>
   );

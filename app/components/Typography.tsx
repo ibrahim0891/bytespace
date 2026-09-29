@@ -85,7 +85,7 @@ export const Paragraph = ({
     ...props
 }: ParagraphProps) => (
     <p
-        className={`text-sm sm:text-base font-normal text-zinc-600 dark:text-zinc-300 leading-relaxed ${className}`.trim()}
+        className={`text-sm sm:text-base font-normal text-gray-700 leading-relaxed ${className}`.trim()}
         {...props}
     >
         {children}
