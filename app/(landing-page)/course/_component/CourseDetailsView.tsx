@@ -76,7 +76,7 @@ export const CourseDetailsView: React.FC<CourseDetailsViewProps> = ({
         isOpen={isVideoModalOpen}
         onClose={() => setIsVideoModalOpen(false)}
         title={resolved.title}
-        thumbnail={resolved.videoThumbnail}
+        videoUrl={resolved.videoUrl}
       />
 
       <EnrollmentModal

@@ -19,6 +19,7 @@ export interface CourseDetailData {
   pricePeriod?: string;
   videoThumbnail?: string;
   videoDuration?: string;
+  videoUrl?: string;
   totalLessons?: number;
   totalHours?: number;
   features?: string[];
@@ -70,6 +71,7 @@ export const defaultCourseData = {
   pricePeriod: "/lifetime",
   videoThumbnail: "/course-preview.jpg",
   videoDuration: "24 hours",
+  videoUrl: "https://youtu.be/dQw4w9WgXcQ?si=RqfaMPkuGUN4wSAI",
   totalLessons: 112,
   totalHours: 24,
   features: [
@@ -216,6 +218,7 @@ export function resolveCourseData(course?: CourseDetailData) {
     pricePeriod: course?.pricePeriod || defaultCourseData.pricePeriod,
     videoThumbnail: course?.videoThumbnail || defaultCourseData.videoThumbnail,
     videoDuration: course?.videoDuration || defaultCourseData.videoDuration,
+    videoUrl: course?.videoUrl || defaultCourseData.videoUrl,
     totalLessons: course?.totalLessons || defaultCourseData.totalLessons,
     totalHours: course?.totalHours || defaultCourseData.totalHours,
     features: course?.features && course.features.length > 0 ? course.features : defaultCourseData.features,
