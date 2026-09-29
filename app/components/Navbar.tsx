@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { ShoppingBag, Menu, X } from "lucide-react";
 
 interface NavbarProps {
@@ -29,7 +30,12 @@ export const Navbar = ({
   const iconColor = isLight ? "text-zinc-800" : "text-white";
 
   return (
-    <header className={`w-full z-50 ${className}`.trim()}>
+    <motion.header
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+      className={`w-full z-50 ${className}`.trim()}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -141,7 +147,7 @@ export const Navbar = ({
           </div>
         </div>
       )}
-    </header>
+    </motion.header>
   );
 };
 
