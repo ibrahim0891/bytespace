@@ -4,9 +4,9 @@ import { UiUxCard, ProgressCard, HappyStudentsCard } from "./FloatingCards";
 
 export const HeroVisuals = () => {
   return (
-    <div className="relative w-full mx-auto flex justify-center items-end mt-8 sm:mt-12 select-none">
+    <div className="relative w-full mx-auto flex justify-center items-end mt-8 sm:mt-4 select-none">
       {/* 3D Decorative Spiral positioned at the left edge */}
-      <div className="absolute -left-20 top-[-45%] w-20 sm:w-28 md:w-70 pointer-events-none z-20">
+      <div className="absolute -left-50 top-[-55%] w-20 sm:w-28 md:w-90 pointer-events-none z-20">
         <Image
           src="/hero section/Frame-1.png"
           alt="3D Decorative Spiral"
@@ -17,7 +17,7 @@ export const HeroVisuals = () => {
       </div>
 
       {/* 3D Decorative Cone positioned at the right edge */}
-      <div className="absolute -right-35 top-[-50%] w-20 sm:w-28 md:w-64 pointer-events-none z-20">
+      <div className="absolute -right-50 top-[-50%] w-20 sm:w-28 md:w-80 pointer-events-none z-20">
         <Image
           src="/hero section/Cone-1.png"
           alt="3D Decorative Cone"
@@ -41,7 +41,7 @@ export const HeroVisuals = () => {
 
       {/* 3D White Floating Shapes */}
       {/* 1. Top-Left White Spiral */}
-      <div className="absolute -top-10 sm:-top-14 left-10 sm:left-20 md:left-32 lg:left-36 w-16 sm:w-24 md:w-36 pointer-events-none z-20 -rotate-12">
+      <div className="absolute -top-10 sm:-top-20 left-10 sm:left-20 md:left-32 lg:left-36 w-16 sm:w-24 md:w-36 pointer-events-none z-20 -rotate-12">
         <Image
           src="/hero section/right spiral .png"
           alt="3D White Spiral"
@@ -63,7 +63,7 @@ export const HeroVisuals = () => {
       </div>
 
       {/* 3. Top-Right White Pyramid Cone */}
-      <div className="absolute -top-8 sm:-top-12 right-12 sm:right-24 md:right-36 lg:right-48 w-16 sm:w-20 md:w-24 pointer-events-none z-20">
+      <div className="absolute -top-8 sm:-top-12 right-12 sm:right-24 md:right-36 lg:right-30 w-16 sm:w-20 md:w-36 pointer-events-none z-20">
         <Image
           src="/hero section/Cone-2.png"
           alt="3D White Pyramid"
