@@ -4,92 +4,107 @@ import { UiUxCard, ProgressCard, HappyStudentsCard } from "./FloatingCards";
 
 export const HeroVisuals = () => {
   return (
-    <div className="relative w-full max-w-5xl mx-auto flex justify-center items-end mt-8 sm:mt-12 select-none">
-      {/* 3D Decorative Floating Shapes (Left Side) */}
-      <div className="absolute -left-4 sm:-left-12 lg:-left-20 top-6 w-24 sm:w-32 md:w-36 pointer-events-none z-10 animate-pulse transition-transform duration-1000">
-        <Image
-          src="/hero section/Auto Layout Vertical-1.png"
-          alt="3D Shape"
-          width={150}
-          height={150}
-          className="w-full h-auto object-contain drop-shadow-2xl"
-        />
-      </div>
-
-      <div className="absolute left-4 sm:left-0 top-[38%] w-16 sm:w-24 md:w-28 pointer-events-none z-10">
-        <Image
-          src="/hero section/Cone-1.png"
-          alt="3D Shape"
-          width={120}
-          height={120}
-          className="w-full h-auto object-contain drop-shadow-xl"
-        />
-      </div>
-
-      <div className="absolute -left-6 sm:-left-10 lg:-left-16 bottom-6 w-28 sm:w-36 md:w-44 pointer-events-none z-10">
+    <div className="relative w-full mx-auto flex justify-center items-end mt-8 sm:mt-12 select-none">
+      {/* 3D Decorative Spiral positioned at the left edge */}
+      <div className="absolute -left-20 top-[-45%] w-20 sm:w-28 md:w-70 pointer-events-none z-20">
         <Image
           src="/hero section/Frame-1.png"
-          alt="3D Shape"
-          width={180}
-          height={180}
-          className="w-full h-auto object-contain drop-shadow-2xl"
-        />
-      </div>
-
-      {/* 3D Decorative Floating Shapes (Right Side) */}
-      <div className="absolute -right-4 sm:-right-12 lg:-right-20 top-4 w-24 sm:w-32 md:w-40 pointer-events-none z-10">
-        <Image
-          src="/hero section/Cone.png"
-          alt="3D Shape"
-          width={160}
-          height={160}
-          className="w-full h-auto object-contain drop-shadow-2xl"
-        />
-      </div>
-
-      <div className="absolute right-6 sm:right-2 top-[34%] w-20 sm:w-28 md:w-32 pointer-events-none z-10">
-        <Image
-          src="/hero section/Cone-2.png"
-          alt="3D Shape"
-          width={130}
-          height={130}
-          className="w-full h-auto object-contain drop-shadow-xl"
-        />
-      </div>
-
-      <div className="absolute -right-6 sm:-right-8 lg:-right-16 bottom-8 w-24 sm:w-32 md:w-36 pointer-events-none z-10">
-        <Image
-          src="/hero section/Auto Layout Vertical.png"
-          alt="3D Shape"
-          width={150}
+          alt="3D Decorative Spiral"
+          width={150}                         
           height={150}
           className="w-full h-auto object-contain drop-shadow-2xl"
         />
       </div>
 
-      {/* Center Main Lime Circle & Student Portrait */}
-      <div className="relative flex justify-center items-end">
-        {/* Big Lime Backdrop Circle */}
-        <div className="w-[340px] h-[340px] sm:w-[480px] sm:h-[480px] md:w-[580px] md:h-[580px] rounded-full bg-[#D4FF00] overflow-hidden flex items-end justify-center relative">
-          <div className="relative w-full h-[95%]">
-            <Image
-              src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=900&auto=format&fit=crop&q=85"
-              alt="Student with laptop"
-              fill
-              priority
-              sizes="(max-width: 768px) 340px, 580px"
-              className="object-cover object-top scale-105"
-            />
-          </div>
-        </div>
-
-        {/* Floating Badge Cards */}
-        <UiUxCard className="absolute top-[25%] -left-6 sm:-left-12 md:-left-20 z-20" />
-        
-        <ProgressCard className="absolute top-[28%] -right-6 sm:-right-12 md:-right-16 z-20" />
-
-        <HappyStudentsCard className="absolute bottom-8 -left-4 sm:-left-10 md:-left-16 z-20" />
+      {/* 3D Decorative Cone positioned at the right edge */}
+      <div className="absolute -right-35 top-[-50%] w-20 sm:w-28 md:w-64 pointer-events-none z-20">
+        <Image
+          src="/hero section/Cone-1.png"
+          alt="3D Decorative Cone"
+          width={372}
+          height={372}
+          className="w-full h-auto object-contain drop-shadow-2xl"
+        />
       </div>
+
+      {/* Background Lime Ring (Half visible in hero section, bottom half clipped by section overflow) */}
+      <div className="absolute left-1/2 -translate-x-1/2 top-15 w-[580px] sm:w-[750px] md:w-[950px] lg:w-[1200px] aspect-square pointer-events-none z-0">
+        <Image
+          src="/hero section/center-figure-background.png"
+          alt="Hero Background Arch"
+          width={1149}
+          height={1149}
+          priority
+          className="w-full h-full object-contain"
+        />
+      </div>
+
+      {/* 3D White Floating Shapes */}
+      {/* 1. Top-Left White Spiral */}
+      <div className="absolute -top-10 sm:-top-14 left-10 sm:left-20 md:left-32 lg:left-36 w-16 sm:w-24 md:w-36 pointer-events-none z-20 -rotate-12">
+        <Image
+          src="/hero section/right spiral .png"
+          alt="3D White Spiral"
+          width={332}
+          height={332}
+          className="w-full h-auto object-contain drop-shadow-xl"
+        />
+      </div>
+
+      {/* 2. Bottom-Left White Torus / Donut */}
+      <div className="absolute bottom-6 sm:bottom-10 left-6 sm:left-12 md:left-20 lg:-left-8 w-24 sm:w-32 md:w-40 lg:w-64 pointer-events-none z-20">
+        <Image
+          src="/hero section/Cone.png"
+          alt="3D White Torus"
+          width={344}
+          height={344}
+          className="w-full h-auto object-contain drop-shadow-2xl"
+        />
+      </div>
+
+      {/* 3. Top-Right White Pyramid Cone */}
+      <div className="absolute -top-8 sm:-top-12 right-12 sm:right-24 md:right-36 lg:right-48 w-16 sm:w-20 md:w-24 pointer-events-none z-20">
+        <Image
+          src="/hero section/Cone-2.png"
+          alt="3D White Pyramid"
+          width={189}
+          height={189}
+          className="w-full h-auto object-contain drop-shadow-xl"
+        />
+      </div>
+
+      {/* 4. Bottom-Right White Spiral */}
+      <div className="absolute bottom-6 sm:bottom-10 right-6 sm:right-12 md:right-0 lg:-right-24 w-24 sm:w-32 md:w-40 lg:w-80 pointer-events-none z-20">
+        <Image
+          src="/hero section/right spiral .png"
+          alt="3D White Spiral"
+          width={332}
+          height={332}
+          className="w-full h-auto object-contain drop-shadow-2xl"
+        />
+      </div>
+
+      {/* Main Center Hero Graphic with Floating Badge Cards */}
+      <div className="relative flex justify-center items-end z-10 w-full max-w-[550px]">
+        {/* Top-Left: UI/UX Design Card */}
+        <UiUxCard className="absolute top-[16%] -left-8 sm:-left-16 md:-left-24 lg:-left-28 z-30" />
+
+        {/* Top-Right: Learning Progress Card */}
+        <ProgressCard className="absolute top-[20%] -right-10 sm:-right-18 md:-right-28 lg:-right-36 z-30" />
+
+        {/* Bottom-Left: Happy Students Card */}
+        <HappyStudentsCard className="absolute bottom-[16%] -left-10 sm:-left-20 md:-left-28 lg:-left-32 z-30" />
+
+        {/* Center Student Figure */}
+        <Image
+          src="/hero section/center-figure.png"
+          alt="ByteSpace Hero Center Figure"
+          width={571}
+          height={515}
+          priority
+          className="w-full max-w-[420px] sm:max-w-[500px] md:max-w-[550px] h-auto object-contain mx-auto"
+        />
+      </div> 
     </div>
   );
 };
