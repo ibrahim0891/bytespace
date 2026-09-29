@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { H1, Lead } from "@/app/components/Typography";
+import GridBackground from "@/app/components/GridBackground";
 import HeroSearch from "../_component/HeroSearch";
 import HeroVisuals from "../_component/HeroVisuals";
 import Navbar from "@/app/components/Navbar";
@@ -11,17 +12,8 @@ export const HeroSection = () => {
   return (
     <section className="relative w-full bg-[#003be2] pb-0 overflow-hidden">
       <Navbar />
-      {/* Grid Pattern Background */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-40"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, rgba(255, 255, 255, 0.35) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.35) 1px, transparent 1px)
-          `,
-          backgroundSize: "110px 110px",
-        }}
-      />
+      {/* Reusable Grid Pattern Background */}
+      <GridBackground />
 
       <div className="relative max-w-7xl mx-auto text-center z-10">
         {/* Title */}

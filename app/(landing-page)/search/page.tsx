@@ -1,9 +1,14 @@
 import React from "react";
+import SearchHeroSection from "./_sections/SearchHeroSection";
+import SearchResultsSection from "./_sections/SearchResultsSection";
+import Footer from "@/app/components/Footer";
 
 export default function SearchPage() {
   return (
-    <div className="min-h-screen p-8 bg-white">
-      <h1 className="text-2xl font-bold text-zinc-950">Search Courses</h1>
+    <div className="w-full min-h-screen bg-white">
+      <SearchHeroSection />
+      <SearchResultsSection />
+      <Footer />
     </div>
   );
 }

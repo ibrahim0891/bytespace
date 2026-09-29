@@ -2,21 +2,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { H2, Paragraph } from "@/app/components/Typography";
+import GridBackground from "@/app/components/GridBackground";
 
 export const CtaSection = () => {
   return (
     <section className="relative w-full bg-[#003be2] py-24 sm:py-32 overflow-hidden">
-      {/* Full-width Grid Background Pattern */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-40"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, rgba(255, 255, 255, 0.25) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 1px, transparent 1px)
-          `,
-          backgroundSize: "110px 110px",
-        }}
-      />
+      {/* Reusable Full-width Grid Background Pattern */}
+      <GridBackground opacity={40} lineColor="rgba(255, 255, 255, 0.25)" />
 
       {/* Floating 3D Assets positioned across the full section */}
       {/* 1. Top-Left Lime Spiral */}

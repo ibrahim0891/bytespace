@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
 
 interface HeroSearchProps {
@@ -9,11 +10,19 @@ interface HeroSearchProps {
 }
 
 export const HeroSearch = ({ onSearch, className = "" }: HeroSearchProps) => {
+  const router = useRouter();
   const [query, setQuery] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (onSearch) onSearch(query);
+
+    const trimmed = query.trim();
+    if (trimmed) {
+      router.push(`/search?q=${encodeURIComponent(trimmed)}`);
+    } else {
+      router.push("/search");
+    }
   };
 
   return (
