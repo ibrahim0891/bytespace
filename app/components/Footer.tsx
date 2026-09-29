@@ -6,74 +6,79 @@ import Image from "next/image";
 
 export const Footer = () => {
   return (
-    <footer className="w-full bg-white border-t border-zinc-200/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-end mb-36">
-          {/* Brand & Newsletter Column (Left) */}
-          <div className="lg:col-span-6 space-y-5">
-            <Link href="/" className="inline-block">
-              <Image
-                src="/bytespace-logo-lightmode.png"
-                alt="ByteSpace"
-                width={160}
-                height={42}
-                className="h-9 w-auto object-contain"
-                priority
-              />
-            </Link>
-            
-            <p className="text-sm sm:text-base text-zinc-700 max-w-lg leading-relaxed font-normal">
-              Stay Up to date with our latest features and releases by joining our newsletter.
-            </p>
+    <footer className="w-full bg-white border-t border-[#ced0d366]">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-0 pt-16 sm:pt-[71px] pb-8 sm:pb-10">
+        {/* Main Content Area */}
+        <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-12 lg:gap-[92px]">
+          {/* Brand & Newsletter Column (Left: 528px) */}
+          <div className="w-full lg:max-w-[528px] flex flex-col gap-8 sm:gap-[45px]">
+            {/* Logo & Description */}
+            <div className="flex flex-col gap-4">
+              <Link href="/" className="inline-block">
+                <Image
+                  src="/bytespace-logo-lightmode.png"
+                  alt="ByteSpace"
+                  width={171}
+                  height={37}
+                  className="h-[37px] w-auto object-contain"
+                  priority
+                />
+              </Link>
+              
+              <p className="text-[#242528] text-[14px] leading-[160%] font-normal max-w-[528px]">
+                Stay Up to date with our latest features and releases by joining our newsletter.
+              </p>
+            </div>
 
-            {/* Newsletter Input + Button */}
-            <form onSubmit={(e) => e.preventDefault()} className="pt-2 max-w-lg">
-              <div className="flex flex-col sm:flex-row items-center gap-3">
+            {/* Newsletter Input + Button + Terms */}
+            <div className="flex flex-col gap-6 w-full max-w-[504px]">
+              <form onSubmit={(e) => e.preventDefault()} className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full sm:flex-1 px-6 py-3.5 rounded-full border border-zinc-300 text-sm sm:text-base text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-zinc-400 focus:ring-2 focus:ring-[#D4FB20]/50 transition-all bg-white"
+                  className="w-full sm:w-[376px] h-[52px] px-6 rounded-[100px] bg-white border border-[#CED0D3] text-[16px] leading-[160%] text-[#242528] placeholder:text-[#242528]/60 focus:outline-none focus:border-zinc-500 transition-all"
                 />
                 <button
                   type="submit"
-                  className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#D4FB20] hover:bg-[#c4eb00] text-zinc-950 font-semibold text-sm sm:text-base transition-transform active:scale-95 cursor-pointer shadow-sm shrink-0"
+                  className="w-full sm:w-[104px] h-[46px] px-6 rounded-[24px] bg-[#D4FB20] hover:bg-[#c6f000] text-[#242528] text-[18px] font-medium leading-[120%] transition-transform active:scale-95 cursor-pointer shrink-0 flex items-center justify-center"
                 >
                   Search
                 </button>
-              </div>
-              <p className="text-xs text-zinc-500 max-w-md mt-8 leading-relaxed font-normal">
+              </form>
+
+              <p className="text-[#242528] text-[12px] leading-[160%] font-normal max-w-[504px]">
                 By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
               </p>
-            </form>
+            </div>
           </div>
 
-          {/* Navigation Links Columns (Right) */}
-          <div className="lg:col-span-6 grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-10 pt-2 lg:pt-0">
+          {/* Navigation Links Columns (Right: 580px) */}
+          <div className="w-full lg:max-w-[580px] grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-10 lg:gap-10 lg:self-end">
             {/* Column 1 */}
             <div>
-              <ul className="space-y-4 text-sm sm:text-base text-zinc-800 font-normal">
+              <ul className="flex flex-col gap-4 text-[14px] leading-[160%] text-[#242528] font-normal">
                 <li>
-                  <Link href="/search?filter=featured" className="hover:text-zinc-950 transition-colors">
+                  <Link href="/search?filter=featured" className="hover:text-black transition-colors">
                     Featured Courses
                   </Link>
                 </li>
                 <li>
-                  <Link href="/search" className="hover:text-zinc-950 transition-colors">
+                  <Link href="/search" className="hover:text-black transition-colors">
                     Featured Categories
                   </Link>
                 </li>
                 <li>
-                  <Link href="/search?category=business" className="hover:text-zinc-950 transition-colors">
+                  <Link href="/search?category=business" className="hover:text-black transition-colors">
                     Business
                   </Link>
                 </li>
                 <li>
-                  <Link href="/search?category=it-software" className="hover:text-zinc-950 transition-colors">
+                  <Link href="/search?category=it-software" className="hover:text-black transition-colors">
                     IT
                   </Link>
                 </li>
                 <li>
-                  <Link href="/search?category=design" className="hover:text-zinc-950 transition-colors">
+                  <Link href="/search?category=design" className="hover:text-black transition-colors">
                     Design
                   </Link>
                 </li>
@@ -82,29 +87,29 @@ export const Footer = () => {
 
             {/* Column 2 */}
             <div>
-              <ul className="space-y-4 text-sm sm:text-base text-zinc-800 font-normal">
+              <ul className="flex flex-col gap-4 text-[14px] leading-[160%] text-[#242528] font-normal">
                 <li>
-                  <Link href="/search?category=development" className="hover:text-zinc-950 transition-colors">
+                  <Link href="/search?category=development" className="hover:text-black transition-colors">
                     Development
                   </Link>
                 </li>
                 <li>
-                  <Link href="/search?category=marketing" className="hover:text-zinc-950 transition-colors">
+                  <Link href="/search?category=marketing" className="hover:text-black transition-colors">
                     Marketing
                   </Link>
                 </li>
                 <li>
-                  <Link href="/search?category=photography" className="hover:text-zinc-950 transition-colors">
+                  <Link href="/search?category=photography" className="hover:text-black transition-colors">
                     Photography
                   </Link>
                 </li>
                 <li>
-                  <Link href="/search?category=finance" className="hover:text-zinc-950 transition-colors">
+                  <Link href="/search?category=finance" className="hover:text-black transition-colors">
                     Finance
                   </Link>
                 </li>
                 <li>
-                  <Link href="/search?category=sport" className="hover:text-zinc-950 transition-colors">
+                  <Link href="/search?category=sport" className="hover:text-black transition-colors">
                     Sport
                   </Link>
                 </li>
@@ -113,29 +118,29 @@ export const Footer = () => {
 
             {/* Column 3 */}
             <div>
-              <ul className="space-y-4 text-sm sm:text-base text-zinc-800 font-normal">
+              <ul className="flex flex-col gap-4 text-[14px] leading-[160%] text-[#242528] font-normal">
                 <li>
-                  <Link href="/auth/register?role=creator" className="hover:text-zinc-950 transition-colors">
+                  <Link href="/auth/register?role=creator" className="hover:text-black transition-colors">
                     Become a Creator
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-zinc-950 transition-colors">
+                  <Link href="#" className="hover:text-black transition-colors">
                     Affiliate Program
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-zinc-950 transition-colors">
+                  <Link href="#" className="hover:text-black transition-colors">
                     Contact
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-zinc-950 transition-colors">
+                  <Link href="#" className="hover:text-black transition-colors">
                     Help
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-zinc-950 transition-colors">
+                  <Link href="#" className="hover:text-black transition-colors">
                     About
                   </Link>
                 </li>
@@ -144,17 +149,17 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-16 sm:mt-20 pt-8 border-t border-zinc-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-zinc-500 font-normal">
+        {/* Divider & Copyright */}
+        <div className="mt-16 sm:mt-24 pt-6 border-t border-[#CED0D3] flex flex-col sm:flex-row items-center justify-between gap-4 text-[12px] leading-[160%] text-[#242528] font-normal">
           <p>@ 2023 ByteSpace. All rights reserved.</p>
-          <div className="flex items-center gap-6 sm:gap-8">
-            <Link href="#" className="hover:text-zinc-800 transition-colors">
+          <div className="flex items-center gap-6">
+            <Link href="#" className="hover:underline transition-all">
               Privacy Policy
             </Link>
-            <Link href="#" className="hover:text-zinc-800 transition-colors">
+            <Link href="#" className="hover:underline transition-all">
               Terms of Service
             </Link>
-            <Link href="#" className="hover:text-zinc-800 transition-colors">
+            <Link href="#" className="hover:underline transition-all">
               Cookies Settings
             </Link>
           </div>

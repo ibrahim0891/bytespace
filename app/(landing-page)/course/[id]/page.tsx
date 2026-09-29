@@ -1,4 +1,5 @@
 import React from "react";
+import CourseDetailsView, { defaultCourseData } from "../_component/CourseDetailsView";
 
 export default async function CoursePage({
   params,
@@ -6,9 +7,12 @@ export default async function CoursePage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  return (
-    <div className="min-h-screen p-8">
-      <h1 className="text-2xl font-bold">Course Details #{id}</h1>
-    </div>
-  );
+
+  // You can extend or customize course data according to the ID parameter
+  const courseData = {
+    ...defaultCourseData,
+    id: id || "1",
+  };
+
+  return <CourseDetailsView course={courseData} />;
 }

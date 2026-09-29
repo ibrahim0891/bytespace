@@ -36,83 +36,89 @@ export const Navbar = ({
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       className={`w-full z-50 ${className}`.trim()}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center group">
-            <Image
-              src="/bytespace-log.png"
-              alt="ByteSpace Logo"
-              width={140}
-              height={36}
-              className="h-8 w-auto object-contain transition-transform group-hover:scale-105"
-              priority
-            />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-[120px] flex items-center justify-between relative">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2.5 group">
+          <Image
+            src="/bytespace-log.png"
+            alt="ByteSpace Logo"
+            width={171}
+            height={37}
+            className="h-8 sm:h-9 w-auto object-contain transition-transform group-hover:scale-105"
+            priority
+          />
+        </Link>
+
+        {/* Desktop Centered Navigation Links */}
+        <nav className="hidden md:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
+          {navLinks.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className={`text-base font-normal transition-colors leading-[1.6] ${
+                link.label === "Home" ? "font-medium leading-[1.2]" : ""
+              } ${isLight ? "text-zinc-700 hover:text-zinc-950" : "text-[#F5F5F6]/90 hover:text-[#F5F5F6]"}`}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Desktop Right Action Items */}
+        <div className="hidden md:flex items-center gap-6">
+          <Link
+            href="/auth/login"
+            className={`text-base font-normal leading-6 transition-colors ${
+              isLight ? "text-zinc-700 hover:text-zinc-950" : "text-[#F5F5F6]/90 hover:text-[#F5F5F6]"
+            }`}
+          >
+            Sign In
           </Link>
+          <Link
+            href="/auth/login"
+            className={`text-base font-normal leading-6 transition-colors ${
+              isLight ? "text-zinc-700 hover:text-zinc-950" : "text-[#F5F5F6]/90 hover:text-[#F5F5F6]"
+            }`}
+          >
+            Join Us
+          </Link>
+          <button
+            type="button"
+            aria-label="Shopping Cart"
+            className={`relative p-1 transition-opacity hover:opacity-80 focus:outline-none cursor-pointer ${
+              isLight ? "text-zinc-800" : "text-[#F5F5F6]"
+            }`}
+          >
+            <ShoppingBag className="w-6 h-6 stroke-[1.8]" />
+            {cartCount > 0 && (
+              <span className="absolute -top-1.5 -right-1.5 bg-[#D4FB20] text-zinc-950 text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                {cartCount}
+              </span>
+            )}
+          </button>
+        </div>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className={`text-sm font-medium transition-colors ${textColor}`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-
-          {/* Right Action Items */}
-          <div className="hidden md:flex items-center gap-6">
-            <Link
-              href="/auth/login"
-              className={`text-sm font-medium transition-colors ${textColor}`}
-            >
-              Sign In
-            </Link>
-            <Link
-              href="/auth/login"
-              className={`text-sm font-medium transition-colors ${textColor}`}
-            >
-              Join Us
-            </Link>
-            <button
-              type="button"
-              aria-label="Shopping Cart"
-              className={`relative p-2 transition-opacity hover:opacity-80 focus:outline-none ${iconColor}`}
-            >
-              <ShoppingBag className="w-5 h-5 stroke-[1.75]" />
-              {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-[#D4FF00] text-zinc-950 text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
-                  {cartCount}
-                </span>
-              )}
-            </button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="flex items-center gap-3 md:hidden">
-            <button
-              type="button"
-              aria-label="Shopping Cart"
-              className={`p-2 ${iconColor}`}
-            >
-              <ShoppingBag className="w-5 h-5 stroke-[1.75]" />
-            </button>
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
-              className={`p-2 focus:outline-none ${iconColor}`}
-            >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
-          </div>
+        {/* Mobile Menu Button */}
+        <div className="flex items-center gap-3 md:hidden">
+          <button
+            type="button"
+            aria-label="Shopping Cart"
+            className={`p-2 ${iconColor}`}
+          >
+            <ShoppingBag className="w-6 h-6 stroke-[1.8]" />
+          </button>
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+            className={`p-2 focus:outline-none ${iconColor}`}
+          >
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
         </div>
       </div>
 

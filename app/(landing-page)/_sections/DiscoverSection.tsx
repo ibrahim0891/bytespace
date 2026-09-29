@@ -1,92 +1,136 @@
 "use client";
 
 import React, { useState } from "react";
-import { H2, Paragraph } from "@/app/components/Typography";
 
-const categoryRows = [
-    [
-        "Featured",
-        "Music",
-        "Drawing & Painting",
-        "Marketing",
-        "Animation",
-        "Social Media",
-        "UI/UX Design",
-        "Creative Marketing",
+const row1 = [
+  "Featured",
+  "Music",
+  "Drawing & Painting",
+  "Marketing",
+  "Animation",
+  "Social Media",
+  "UI/UX Design",
+  "Creative Marketing",
+];
 
-        "Digital Illustration",
-        "Film & Video",
-        "Crafts",
-        "Freelance & Entrepreneurship",
-        "Graphic Design",
-        "Photography",
+const row2 = [
+  "Digital Illustration",
+  "Film & Video",
+  "Crafts",
+  "Freelance & Entrepreneurship",
+  "Graphic Design",
+  "Photography",
+];
 
-        "Productivity",
-        "Web Development",
-        "Data Science",
-        "Cooking",
-        "+ More",
-    ],
+const row3 = [
+  "Productivity",
+  "Web Development",
+  "Data Science",
+  "Cooking",
+  "+ More",
 ];
 
 export const DiscoverSection = () => {
-    const [selectedCategory, setSelectedCategory] = useState("Featured");
+  const [selectedCategory, setSelectedCategory] = useState("Featured");
 
-    return (
-        <section className="w-full bg-white py-16 sm:py-24">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                {/* Main Heading */}
-                <H2 className="text-zinc-950 text-3xl sm:text-4xl md:text-5xl font-semibold   leading-[1.15]">
-                    Discover Your Passion, <br />
-                    Build Your Skills
-                </H2>
+  return (
+    <section className="w-full bg-[#FFFFFF] py-16 sm:py-20 lg:py-24">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-0 flex flex-col items-center gap-10 sm:gap-12 lg:gap-[42px]">
+        {/* Frame 3: Header Block (width: 917px, gap: 16px) */}
+        <div className="w-full max-w-[917px] mx-auto flex flex-col items-center text-center gap-4">
+          {/* Heading M: Poppins 600, 44px, 120%, -0.01em, #040819 */}
+          <h2 className="w-full max-w-[588px] font-semibold text-3xl sm:text-4xl lg:text-[44px] leading-[1.2] tracking-[-0.01em] text-[#040819]">
+            Discover Your Passion, Build Your Skills
+          </h2>
 
-                {/* Subtitle */}
-                <Paragraph className="text-gray-900 text-sm sm:text-base max-w-5xl mx-auto mt-4 leading-relaxed font-normal">
-                    At Bytespace Courses, we bring you closer to life-changing
-                    knowledge. Explore a variety of courses across different
-                    fields, from technology to the arts, and make a difference
-                    in your career and life.
-                </Paragraph>
+          {/* Body L: Satoshi 400, 18px, 160%, #82868E */}
+          <p className="w-full font-normal text-base sm:text-[18px] leading-[1.6] text-[#82868E]">
+            At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life.
+          </p>
+        </div>
 
-                {/* Category Pills Stack */}
-                <div className="mt-10 sm:mt-12 flex flex-col items-center gap-3 sm:gap-3.5">
-                    {categoryRows.map((row, rowIndex) => (
-                        <div
-                            key={rowIndex}
-                            className="flex flex-wrap items-center justify-center gap-5 sm:gap-6"
-                        >
-                            {row.map((category) => {
-                                const isSelected =
-                                    selectedCategory === category;
-                                const isMore = category === "+ More";
+        {/* Category Pills Stack: 3 Distinct Rows with 16px gaps */}
+        <div className="w-full flex flex-col items-center gap-4 sm:gap-4">
+          {/* Row 1: Tab_Categories (max-w 1086px) */}
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 max-w-[1086px]">
+            {row1.map((category) => {
+              const isSelected = selectedCategory === category;
+              return (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  type="button"
+                  className={`h-[43px] px-4 py-3 rounded-[24px] text-[16px] leading-[1.2] font-medium transition-all duration-200 cursor-pointer select-none flex items-center justify-center whitespace-nowrap ${
+                    isSelected
+                      ? "bg-[#D4FB20] text-[#242528] shadow-xs"
+                      : "bg-[#F5F5F6] text-[#4B4C53] hover:bg-[#eaebee]"
+                  }`}
+                >
+                  {category}
+                </button>
+              );
+            })}
+          </div>
 
-                                return (
-                                    <button
-                                        key={category}
-                                        onClick={() => {
-                                            if (!isMore)
-                                                setSelectedCategory(category);
-                                        }}
-                                        type="button"
-                                        className={`rounded-full px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm transition-colors duration-150 cursor-pointer select-none font-medium ${
-                                            isSelected
-                                                ? "bg-[#D4FF00] text-zinc-950 font-semibold"
-                                                : isMore
-                                                  ? "bg-transparent text-blue-600 hover:text-blue-700 font-semibold px-3"
-                                                  : "bg-[#F4F4F6] hover:bg-zinc-200 text-zinc-700"
-                                        }`.trim()}
-                                    >
-                                        {category}
-                                    </button>
-                                );
-                            })}
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
+          {/* Row 2: Frame 6 (max-w 952px) */}
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 max-w-[952px]">
+            {row2.map((category) => {
+              const isSelected = selectedCategory === category;
+              return (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  type="button"
+                  className={`h-[43px] px-4 py-3 rounded-[24px] text-[16px] leading-[1.2] font-medium transition-all duration-200 cursor-pointer select-none flex items-center justify-center whitespace-nowrap ${
+                    isSelected
+                      ? "bg-[#D4FB20] text-[#242528] shadow-xs"
+                      : "bg-[#F5F5F6] text-[#4B4C53] hover:bg-[#eaebee]"
+                  }`}
+                >
+                  {category}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Row 3: Frame 7 (max-w 622px) */}
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 max-w-[622px]">
+            {row3.map((category) => {
+              const isSelected = selectedCategory === category;
+              const isMore = category === "+ More";
+
+              if (isMore) {
+                return (
+                  <button
+                    key={category}
+                    type="button"
+                    className="h-[43px] px-4 py-3 rounded-[24px] text-[16px] leading-[1.2] font-medium text-[#003BE2] hover:underline cursor-pointer select-none flex items-center justify-center whitespace-nowrap"
+                  >
+                    {category}
+                  </button>
+                );
+              }
+
+              return (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  type="button"
+                  className={`h-[43px] px-4 py-3 rounded-[24px] text-[16px] leading-[1.2] font-medium transition-all duration-200 cursor-pointer select-none flex items-center justify-center whitespace-nowrap ${
+                    isSelected
+                      ? "bg-[#D4FB20] text-[#242528] shadow-xs"
+                      : "bg-[#F5F5F6] text-[#4B4C53] hover:bg-[#eaebee]"
+                  }`}
+                >
+                  {category}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default DiscoverSection;
