@@ -2,10 +2,12 @@ import React from "react";
 import { H1, Lead } from "@/app/components/Typography";
 import HeroSearch from "../_component/HeroSearch";
 import HeroVisuals from "../_component/HeroVisuals";
+import Navbar from "@/app/components/Navbar";
 
 export const HeroSection = () => {
   return (
-    <section className="relative w-full bg-[#0055FF] pt-8 sm:pt-14 pb-0 overflow-hidden">
+    <section className="relative w-full bg-[#0055FF]  pb-0 overflow-hidden">
+      <Navbar/>
       {/* Grid Pattern Background */}
       <div 
         className="absolute inset-0 pointer-events-none opacity-25"
@@ -18,7 +20,7 @@ export const HeroSection = () => {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+      <div className="relative max-w-7xl mx-auto   text-center z-10">
         {/* Title */}
         <H1 className="text-white max-w-4xl mx-auto tracking-tight font-extrabold text-3xl sm:text-5xl lg:text-[56px] leading-[1.1]">
           Get Access to Hundreds <br className="hidden sm:block" /> Courses Available
