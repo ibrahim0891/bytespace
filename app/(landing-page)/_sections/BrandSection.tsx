@@ -10,7 +10,7 @@ const logos = [
 
 export const BrandSection = () => {
   return (
-    <section className="w-full bg-[#F4F4F6] py-10 sm:py-12 border-y border-zinc-200/70 dark:border-zinc-800">
+    <section className="w-full bg-[#F4F4F6] py-10 sm:py-20  border-zinc-200/70 dark:border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-center sm:justify-between gap-8 sm:gap-12 md:gap-16">
           {logos.map((logo, index) => (
@@ -23,7 +23,7 @@ export const BrandSection = () => {
                 alt={logo.alt}
                 width={160}
                 height={40}
-                className="h-7 sm:h-8 w-auto object-contain"
+                className="h-7 sm:h-10 w-auto object-contain"
               />
             </div>
           ))}

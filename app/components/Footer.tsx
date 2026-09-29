@@ -6,51 +6,52 @@ import Image from "next/image";
 
 export const Footer = () => {
   return (
-    <footer className="w-full bg-white border-t border-zinc-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
-          {/* Brand & Newsletter Column */}
-          <div className="lg:col-span-5 space-y-6">
+    <footer className="w-full bg-white border-t border-zinc-200/80">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-end mb-36">
+          {/* Brand & Newsletter Column (Left) */}
+          <div className="lg:col-span-6 space-y-5">
             <Link href="/" className="inline-block">
               <Image
-                src="/bytespace-log.png"
+                src="/bytespace-logo-lightmode.png"
                 alt="ByteSpace"
-                width={140}
-                height={36}
-                className="h-8 w-auto object-contain"
+                width={160}
+                height={42}
+                className="h-9 w-auto object-contain"
+                priority
               />
             </Link>
-            <p className="text-sm text-zinc-600 max-w-sm leading-relaxed">
-              Stay up to date with our latest features, new courses, and creator releases by joining our newsletter.
+            
+            <p className="text-sm sm:text-base text-zinc-700 max-w-lg leading-relaxed font-normal">
+              Stay Up to date with our latest features and releases by joining our newsletter.
             </p>
 
-            {/* Newsletter Input */}
-            <form onSubmit={(e) => e.preventDefault()} className="space-y-2.5 max-w-md">
-              <div className="flex flex-col sm:flex-row gap-2.5">
+            {/* Newsletter Input + Button */}
+            <form onSubmit={(e) => e.preventDefault()} className="pt-2 max-w-lg">
+              <div className="flex flex-col sm:flex-row items-center gap-3">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-full border border-zinc-300 text-sm focus:outline-none focus:border-[#0055FF] focus:ring-2 focus:ring-[#0055FF]/20 transition-all bg-white"
+                  className="w-full sm:flex-1 px-6 py-3.5 rounded-full border border-zinc-300 text-sm sm:text-base text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-zinc-400 focus:ring-2 focus:ring-[#D4FB20]/50 transition-all bg-white"
                 />
                 <button
                   type="submit"
-                  className="px-6 py-3 rounded-full bg-zinc-950 hover:bg-zinc-800 text-white font-semibold text-sm transition-colors cursor-pointer"
+                  className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#D4FB20] hover:bg-[#c4eb00] text-zinc-950 font-semibold text-sm sm:text-base transition-transform active:scale-95 cursor-pointer shadow-sm shrink-0"
                 >
-                  Subscribe
+                  Search
                 </button>
               </div>
-              <p className="text-xs text-zinc-400 leading-normal">
+              <p className="text-xs text-zinc-500 max-w-md mt-8 leading-relaxed font-normal">
                 By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
               </p>
             </form>
           </div>
 
-          {/* Navigation Columns */}
-          <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
-            {/* Column 1: Browse */}
+          {/* Navigation Links Columns (Right) */}
+          <div className="lg:col-span-6 grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-10 pt-2 lg:pt-0">
+            {/* Column 1 */}
             <div>
-              <h3 className="text-sm font-bold text-zinc-950 uppercase tracking-wider mb-4">Browse</h3>
-              <ul className="space-y-3 text-sm text-zinc-600 font-medium">
+              <ul className="space-y-4 text-sm sm:text-base text-zinc-800 font-normal">
                 <li>
                   <Link href="/search?filter=featured" className="hover:text-zinc-950 transition-colors">
                     Featured Courses
@@ -79,10 +80,9 @@ export const Footer = () => {
               </ul>
             </div>
 
-            {/* Column 2: Categories */}
+            {/* Column 2 */}
             <div>
-              <h3 className="text-sm font-bold text-zinc-950 uppercase tracking-wider mb-4">Categories</h3>
-              <ul className="space-y-3 text-sm text-zinc-600 font-medium">
+              <ul className="space-y-4 text-sm sm:text-base text-zinc-800 font-normal">
                 <li>
                   <Link href="/search?category=development" className="hover:text-zinc-950 transition-colors">
                     Development
@@ -111,10 +111,9 @@ export const Footer = () => {
               </ul>
             </div>
 
-            {/* Column 3: Platform */}
+            {/* Column 3 */}
             <div>
-              <h3 className="text-sm font-bold text-zinc-950 uppercase tracking-wider mb-4">Platform</h3>
-              <ul className="space-y-3 text-sm text-zinc-600 font-medium">
+              <ul className="space-y-4 text-sm sm:text-base text-zinc-800 font-normal">
                 <li>
                   <Link href="/auth/register?role=creator" className="hover:text-zinc-950 transition-colors">
                     Become a Creator
@@ -146,16 +145,16 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-zinc-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
-          <p>© 2026 ByteSpace. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <Link href="#" className="hover:text-zinc-900 transition-colors underline-offset-4 hover:underline">
+        <div className="mt-16 sm:mt-20 pt-8 border-t border-zinc-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-zinc-500 font-normal">
+          <p>@ 2023 ByteSpace. All rights reserved.</p>
+          <div className="flex items-center gap-6 sm:gap-8">
+            <Link href="#" className="hover:text-zinc-800 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#" className="hover:text-zinc-900 transition-colors underline-offset-4 hover:underline">
+            <Link href="#" className="hover:text-zinc-800 transition-colors">
               Terms of Service
             </Link>
-            <Link href="#" className="hover:text-zinc-900 transition-colors underline-offset-4 hover:underline">
+            <Link href="#" className="hover:text-zinc-800 transition-colors">
               Cookies Settings
             </Link>
           </div>
