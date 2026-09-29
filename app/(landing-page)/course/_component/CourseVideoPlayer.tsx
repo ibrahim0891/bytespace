@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Play, Clock } from "lucide-react";
+import { Play } from "lucide-react";
 
 interface CourseVideoPlayerProps {
   thumbnail: string;
@@ -44,12 +44,6 @@ export const CourseVideoPlayer: React.FC<CourseVideoPlayerProps> = ({
         >
           <Play className="w-10 h-10 sm:w-[60px] sm:h-[60px] fill-[#F5F2FF] text-[#F5F2FF] translate-x-1" />
         </button>
-      </div>
-
-      {/* Floating Duration Pill */}
-      <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-md text-white text-xs font-medium px-3.5 py-1.5 rounded-full flex items-center gap-1.5 border border-white/10">
-        <Clock className="w-3.5 h-3.5 text-[#D4FB20]" />
-        <span>Preview Trailer</span>
       </div>
     </motion.div>
   );

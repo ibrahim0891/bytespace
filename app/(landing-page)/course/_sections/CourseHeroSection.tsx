@@ -137,10 +137,10 @@ export const CourseHeroSection: React.FC<CourseHeroSectionProps> = ({
                     </motion.div>
                 </div>
 
-                {/* Video Preview Box and Sidebar in the EXACT SAME grid row for 100% top edge alignment */}
-                <div className="mt-8 sm:mt-12 lg:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-14 items-start">
-                    {/* Left Column: Video Preview Player */}
-                    <div className="lg:col-span-7 xl:col-span-8">
+                {/* Video Preview Box and Sidebar with 7 cols (left), 1 col blank, 4 cols (right) */}
+                <div className="mt-8 sm:mt-12 lg:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
+                    {/* Left Column: Video Preview Player (7 Columns) */}
+                    <div className="lg:col-span-8">
                         <CourseVideoPlayer
                             thumbnail={videoThumbnail}
                             title={title}
@@ -148,8 +148,8 @@ export const CourseHeroSection: React.FC<CourseHeroSectionProps> = ({
                         />
                     </div>
 
-                    {/* Right Column: Sidebar slot starting at the exact same top alignment as video */}
-                    <div className="hidden lg:block lg:col-span-5 xl:col-span-4 relative h-0">
+                    {/* Right Column: Sidebar slot (4 Columns starting at Column 9, leaving Column 8 blank) */}
+                    <div className="hidden lg:block lg:col-span-5 lg:col-start-9 relative h-0">
                         <div className="absolute top-0 left-0 w-full z-30">
                             {sidebarSlot}
                         </div>

@@ -53,9 +53,9 @@ export const CourseContentSection: React.FC<CourseContentSectionProps> = ({
   return (
     <section className="relative z-10 w-full bg-white pb-24 pt-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-14 items-start">
-          {/* Left Main Content: Tabs & Details (8 Columns) */}
-          <div className="lg:col-span-7 xl:col-span-8 pt-7 space-y-7">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+          {/* Left Main Content: Tabs & Details (7 Columns to match Video Player) */}
+          <div className="lg:col-span-9 pt-7 space-y-7">
             {/* Tab Navigation */}
             <CourseTabs activeTab={activeTab} onSelectTab={setActiveTab} />
 
@@ -90,8 +90,8 @@ export const CourseContentSection: React.FC<CourseContentSectionProps> = ({
             </div>
           </div>
 
-          {/* Right Column: Mobile Sidebar placement OR Desktop Reserved Space */}
-          <div className="lg:col-span-5 xl:col-span-4 block lg:hidden pt-6">
+          {/* Right Column: Mobile Sidebar placement */}
+          <div className="block lg:hidden pt-6">
             <CourseSidebarCard
               totalLessons={course.totalLessons || 112}
               totalHours={course.totalHours || 24}
@@ -107,8 +107,8 @@ export const CourseContentSection: React.FC<CourseContentSectionProps> = ({
             />
           </div>
 
-          {/* Desktop Reserved Space to ensure bottom footer clearance for tall card */}
-          <div className="hidden lg:block lg:col-span-5 xl:col-span-4 min-h-[750px] pointer-events-none" />
+          {/* Desktop Reserved Space to ensure bottom footer clearance for tall card (4 Columns starting at Column 9) */}
+          <div className="hidden lg:block lg:col-span-4 lg:col-start-9 min-h-[750px] pointer-events-none" />
         </div>
       </div>
     </section>

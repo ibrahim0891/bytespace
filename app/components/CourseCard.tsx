@@ -13,6 +13,8 @@ export interface CourseCardProps {
     duration?: string;
     commentsCount?: string | number;
     level?: string;
+    category?: string;
+    topics?: string[];
     studentAvatars?: string[];
     studentsBadge?: string;
     price?: string | number;
@@ -29,6 +31,7 @@ const defaultAvatars = [
 ];
 
 export const CourseCard = ({
+    id = "1",
     title,
     author = "purepearl studio",
     image,
@@ -41,12 +44,15 @@ export const CourseCard = ({
     studentsBadge = "26+",
     price = "$25",
     pricePeriod = "/lifetime",
-    href = "/course/1",
+    href,
     className = "",
 }: CourseCardProps) => {
+    const courseHref = href || `/course/${id || 1}`;
+
     return (
-        <div
-            className={`group bg-white rounded-[24px] p-4 border border-[#CED0D3] hover:border-zinc-400 transition-all flex flex-col justify-between shadow-xs hover:shadow-md ${className}`.trim()}
+        <Link
+            href={courseHref}
+            className={`group bg-white rounded-[24px] p-4 border border-[#CED0D3] hover:border-zinc-400 transition-all flex flex-col justify-between shadow-xs hover:shadow-md cursor-pointer block ${className}`.trim()}
         >
             {/* Thumbnail Container with Figma 12px Radius & Frosted Pills */}
             <div>
@@ -73,26 +79,21 @@ export const CourseCard = ({
                     </div>
                 </div>
 
-                {/* Course Title & Rating Header (Figma: Poppins 600 20px, Star in #CED0D3) */}
+                {/* Course Title & Rating Header */}
                 <div className="mt-4 flex items-start justify-between gap-2">
-                    <Link
-                        href={href}
-                        className="block group-hover:text-[#003BE2] transition-colors flex-1"
-                    >
-                        <h3 className="font-semibold text-[#000000] text-[20px] leading-[1.2] tracking-[-0.01em] line-clamp-1">
-                            {title}
-                        </h3>
-                    </Link>
+                    <h3 className="font-semibold text-[#000000] text-[20px] leading-[1.2] tracking-[-0.01em] line-clamp-1 group-hover:text-[#003BE2] transition-colors flex-1">
+                        {title}
+                    </h3>
                     <div className="flex items-center gap-1 shrink-0 text-[18px] font-medium text-[#4F4F4F] leading-[28px]">
                         <span>{rating}</span>
                         <Star className="w-5 h-5 fill-[#CED0D3] text-[#CED0D3]" />
                     </div>
                 </div>
 
-                {/* Author Byline (Figma: Satoshi 400 12px #4F4F4F) */}
+                {/* Author Byline */}
                 <p className="text-[12px] leading-[1.6] text-[#4F4F4F] mt-1">
                     by{" "}
-                    <span className="text-[#003BE2] font-medium hover:underline cursor-pointer">
+                    <span className="text-[#003BE2] font-medium">
                         {author}
                     </span>
                 </p>
@@ -101,13 +102,13 @@ export const CourseCard = ({
             {/* Card Footer: Level, 32px Avatars & Price */}
             <div className="mt-4 pt-3 flex flex-col gap-3">
                 <div className="flex items-center justify-between gap-2">
-                    {/* Level Badge (Figma: #F5F5F6, #4B4C53 text, height 32px, radius 24px) */}
+                    {/* Level Badge */}
                     <div className="h-8 px-3 py-1.5 rounded-[24px] bg-[#F5F5F6] text-[#4B4C53] text-[12px] font-medium inline-flex items-center gap-1">
                         <Signal className="w-4 h-4 text-[#4B4C53]" />
                         <span>{level}</span>
                     </div>
 
-                    {/* Student Avatars Stack (Figma: 32px diameter, #D4FB20 badge) */}
+                    {/* Student Avatars Stack */}
                     <div className="flex items-center">
                         {studentAvatars.slice(0, 4).map((avatar, idx) => (
                             <div
@@ -129,7 +130,7 @@ export const CourseCard = ({
                     </div>
                 </div>
 
-                {/* Price (Figma: Poppins 600 20px in #003BE2, /lifetime in 12px #4F4F4F) */}
+                {/* Price */}
                 <div className="flex items-baseline gap-1 mt-1">
                     <span className="text-[20px] font-semibold text-[#003BE2] leading-[1.2] tracking-[-0.01em]">
                         {typeof price === "number" ? `$${price}` : price}
@@ -139,7 +140,7 @@ export const CourseCard = ({
                     </span>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 

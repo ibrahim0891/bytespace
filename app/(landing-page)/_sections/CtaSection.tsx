@@ -23,7 +23,7 @@ export const CtaSection = () => {
             </div>
 
             {/* 2. Top-Left White Spring (inner left above title) */}
-            <div className="absolute top-4 sm:top-6 left-[12%] sm:left-[16%] lg:left-[16%] w-16 sm:w-24 lg:w-44 h-16 sm:h-24 lg:h-44 pointer-events-none select-none z-0">
+            <div className="hidden sm:block absolute top-4 sm:top-6 left-[12%] sm:left-[16%] lg:left-[16%] w-16 sm:w-24 lg:w-44 h-16 sm:h-24 lg:h-44 pointer-events-none select-none z-0">
                 <Image
                     src="/white-spring.png"
                     alt=""
@@ -34,7 +34,7 @@ export const CtaSection = () => {
             </div>
 
             {/* 3. Mid-Left White Cone (pointing up along left edge) */}
-            <div className="absolute top-[52%] -translate-y-1/2 -left-3 sm:left-0 lg:left-2 w-20 sm:w-28 lg:w-36 h-20 sm:h-28 lg:h-36 pointer-events-none select-none z-0">
+            <div className="hidden sm:block absolute top-[52%] -translate-y-1/2 -left-3 sm:left-0 lg:left-2 w-20 sm:w-28 lg:w-36 h-20 sm:h-28 lg:h-36 pointer-events-none select-none z-0">
                 <Image
                     src="/hero section/Cone-2.png"
                     alt=""
@@ -67,7 +67,7 @@ export const CtaSection = () => {
             </div>
 
             {/* 6. Top-Right White Cylinder/Shape (top right corner) */}
-            <div className="absolute -top-10 sm:top-4 -right-12 sm:-right-30 w-48 sm:w-68 lg:w-80 h-48 sm:h-68 lg:h-80 pointer-events-none select-none z-0">
+            <div className="hidden sm:block absolute -top-10 sm:top-4 -right-12 sm:-right-30 w-48 sm:w-68 lg:w-80 h-48 sm:h-68 lg:h-80 pointer-events-none select-none z-0">
                 <Image
                     src="/Mask Group-1.png"
                     alt=""

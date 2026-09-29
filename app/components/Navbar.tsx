@@ -55,7 +55,7 @@ export const Navbar = ({
             <Link
               key={link.label}
               href={link.href}
-              className={`text-base font-normal transition-colors leading-[1.6] ${
+              className={`text-base font-normal transition-all duration-200 transform hover:-translate-y-0.5 leading-[1.6] ${
                 link.label === "Home" ? "font-medium leading-[1.2]" : ""
               } ${isLight ? "text-zinc-700 hover:text-zinc-950" : "text-[#F5F5F6]/90 hover:text-[#F5F5F6]"}`}
             >
@@ -68,7 +68,7 @@ export const Navbar = ({
         <div className="hidden md:flex items-center gap-6">
           <Link
             href="/auth/login"
-            className={`text-base font-normal leading-6 transition-colors ${
+            className={`text-base font-normal leading-6 transition-all duration-200 transform hover:-translate-y-0.5 ${
               isLight ? "text-zinc-700 hover:text-zinc-950" : "text-[#F5F5F6]/90 hover:text-[#F5F5F6]"
             }`}
           >
@@ -76,7 +76,7 @@ export const Navbar = ({
           </Link>
           <Link
             href="/auth/login"
-            className={`text-base font-normal leading-6 transition-colors ${
+            className={`text-base font-normal leading-6 transition-all duration-200 transform hover:-translate-y-0.5 ${
               isLight ? "text-zinc-700 hover:text-zinc-950" : "text-[#F5F5F6]/90 hover:text-[#F5F5F6]"
             }`}
           >
@@ -85,7 +85,7 @@ export const Navbar = ({
           <button
             type="button"
             aria-label="Shopping Cart"
-            className={`relative p-1 transition-opacity hover:opacity-80 focus:outline-none cursor-pointer ${
+            className={`relative p-1 transition-all duration-200 transform hover:-translate-y-0.5 hover:opacity-80 focus:outline-none cursor-pointer ${
               isLight ? "text-zinc-800" : "text-[#F5F5F6]"
             }`}
           >

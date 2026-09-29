@@ -59,7 +59,7 @@ export const defaultCourseData = {
     name: "PurePearl Studio",
     role: "Professional Creator",
     avatar: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=120&h=120&fit=crop&crop=faces",
-    profileUrl: "/creator-profile",
+    profileUrl: "/creator-profile/1",
     bio: "Ready to Dive In? Enroll Now and Start Building Your Digital Future!",
   },
   level: "Intermediate",

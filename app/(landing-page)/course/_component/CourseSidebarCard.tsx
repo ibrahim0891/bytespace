@@ -40,7 +40,7 @@ export const CourseSidebarCard: React.FC<CourseSidebarCardProps> = ({
       {/* 1. Header & Lessons List Block */}
       <div className="flex flex-col gap-6">
         {/* Header Title: 112 Lessons (24 hours) */}
-        <h3 className="font-semibold text-[20px] leading-[1.2] tracking-[-0.01em] text-[#242528]">
+        <h3 className="font-semibold text-[20px] leading-[1.2]  text-[#242528]">
           {displayLessons} Lessons ({displayHours} hours)
         </h3>
 
