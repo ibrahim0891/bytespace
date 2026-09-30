@@ -7,13 +7,13 @@ import { UiUxCard, ProgressCard, HappyStudentsCard } from "./FloatingCards";
 
 export const HeroVisuals = () => {
   return (
-    <div className="relative w-full mx-auto flex justify-center items-end mt-8 sm:mt-4 select-none">
+    <div className="relative w-full mx-auto flex justify-center items-end mt-8 sm:mt-4">
       {/* 3D Decorative Spiral positioned at the left edge */}
       <motion.div
         initial={{ opacity: 0, scale: 0.6, rotate: -25 }}
         animate={{ opacity: 1, scale: 1, rotate: 0 }}
         transition={{ duration: 0.9, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-        className="hidden md:block absolute -left-50 top-[-55%] w-20 sm:w-28 md:w-90 pointer-events-none z-20"
+        className="hidden md:block absolute -left-50 top-[-55%] w-20 sm:w-28 md:w-90 pointer-events-none select-none z-10"
       >
         <Image
           src="/hero section/Frame-1.png"
@@ -29,7 +29,7 @@ export const HeroVisuals = () => {
         initial={{ opacity: 0, scale: 0.6, rotate: 20 }}
         animate={{ opacity: 1, scale: 1, rotate: 0 }}
         transition={{ duration: 0.9, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        className="hidden md:block absolute -right-50 top-[-50%] w-20 sm:w-28 md:w-80 pointer-events-none z-20"
+        className="hidden md:block absolute -right-50 top-[-50%] w-20 sm:w-28 md:w-80 pointer-events-none select-none z-10"
       >
         <Image
           src="/hero section/Cone-1.png"
@@ -45,7 +45,7 @@ export const HeroVisuals = () => {
         initial={{ opacity: 0, scale: 0.82 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute left-1/2 -translate-x-1/2 top-15 w-[580px] sm:w-[750px] md:w-[950px] lg:w-[1200px] aspect-square pointer-events-none z-0"
+        className="absolute left-1/2 -translate-x-1/2 top-15 w-[580px] sm:w-[750px] md:w-[950px] lg:w-[1200px] aspect-square pointer-events-none select-none z-0"
       >
         <Image
           src="/hero section/center-figure-background.png"
@@ -63,7 +63,7 @@ export const HeroVisuals = () => {
         initial={{ opacity: 0, scale: 0.85, y: -15 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        className="hidden sm:block absolute -top-10 sm:-top-20 left-10 sm:left-20 md:left-32 lg:left-36 w-16 sm:w-24 md:w-36 pointer-events-none z-20 -rotate-12"
+        className="hidden sm:block absolute -top-10 sm:-top-20 left-10 sm:left-20 md:left-32 lg:left-36 w-16 sm:w-24 md:w-36 pointer-events-none select-none z-10 -rotate-12"
       >
         <Image
           src="/hero section/right spiral .png"
@@ -74,12 +74,12 @@ export const HeroVisuals = () => {
         />
       </motion.div>
 
-      {/* 2. Bottom-Left White Torus / Donut */}
+      {/* 2. Bottom-Left White Torus / Donut (Placed behind cards and further out to the left) */}
       <motion.div
         initial={{ opacity: 0, scale: 0.85, y: 15 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
-        className="hidden sm:block absolute bottom-6 sm:bottom-10 left-6 sm:left-12 md:left-20 lg:-left-8 w-24 sm:w-32 md:w-40 lg:w-64 pointer-events-none z-20"
+        className="hidden sm:block absolute -bottom-2 sm:bottom-2 -left-4 sm:-left-10 md:-left-20 lg:-left-36 w-24 sm:w-32 md:w-44 lg:w-64 pointer-events-none select-none z-0"
       >
         <Image
           src="/hero section/Cone.png"
@@ -95,7 +95,7 @@ export const HeroVisuals = () => {
         initial={{ opacity: 0, scale: 0.85, y: -15 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        className="hidden sm:block absolute -top-8 sm:-top-12 right-12 sm:right-24 md:right-36 lg:right-30 w-16 sm:w-20 md:w-36 pointer-events-none z-20"
+        className="hidden sm:block absolute -top-8 sm:-top-12 right-12 sm:right-24 md:right-36 lg:right-30 w-16 sm:w-20 md:w-36 pointer-events-none select-none z-10"
       >
         <Image
           src="/hero section/Cone-2.png"
@@ -111,7 +111,7 @@ export const HeroVisuals = () => {
         initial={{ opacity: 0, scale: 0.85, y: 15 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
-        className="hidden sm:block absolute bottom-6 sm:bottom-10 right-6 sm:right-12 md:right-0 lg:-right-24 w-24 sm:w-32 md:w-40 lg:w-80 pointer-events-none z-20"
+        className="hidden sm:block absolute bottom-6 sm:bottom-10 right-6 sm:right-12 md:right-0 lg:-right-24 w-24 sm:w-32 md:w-40 lg:w-80 pointer-events-none select-none z-10"
       >
         <Image
           src="/hero section/right spiral .png"
@@ -123,13 +123,13 @@ export const HeroVisuals = () => {
       </motion.div>
 
       {/* Main Center Hero Graphic with Floating Badge Cards */}
-      <div className="relative flex justify-center items-end z-10 w-full max-w-[550px]">
+      <div className="relative flex justify-center items-end z-20 w-full max-w-[550px]">
         {/* Top-Left: UI/UX Design Card */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
-          className="hidden sm:block absolute top-[16%] -left-8 sm:-left-16 md:-left-24 lg:-left-28 z-30"
+          className="hidden sm:block absolute top-[16%] -left-8 sm:-left-16 md:-left-24 lg:-left-28 z-30 pointer-events-auto"
         >
           <UiUxCard />
         </motion.div>
@@ -139,7 +139,7 @@ export const HeroVisuals = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
-          className="hidden sm:block absolute top-[20%] -right-10 sm:-right-18 md:-right-28 lg:-right-36 z-30"
+          className="hidden sm:block absolute top-[20%] -right-10 sm:-right-18 md:-right-28 lg:-right-36 z-30 pointer-events-auto"
         >
           <ProgressCard />
         </motion.div>
@@ -149,7 +149,7 @@ export const HeroVisuals = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.75, ease: [0.16, 1, 0.3, 1] }}
-          className="hidden sm:block absolute bottom-[16%] -left-10 sm:-left-20 md:-left-28 lg:-left-32 z-30"
+          className="hidden sm:block absolute bottom-[16%] -left-10 sm:-left-20 md:-left-28 lg:-left-32 z-30 pointer-events-auto"
         >
           <HappyStudentsCard />
         </motion.div>
@@ -159,7 +159,7 @@ export const HeroVisuals = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full flex justify-center"
+          className="w-full flex justify-center pointer-events-none select-none"
         >
           <Image
             src="/hero section/center-figure.png"

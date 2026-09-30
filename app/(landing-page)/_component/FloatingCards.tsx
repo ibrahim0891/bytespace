@@ -3,12 +3,12 @@ import Image from "next/image";
 
 export const UiUxCard = ({ className = "" }: { className?: string }) => (
   <div
-    className={`bg-white/95 backdrop-blur-[10px] rounded-[16px] p-4 shadow-xl border border-white/40 text-left w-[208px] h-[70px] flex flex-col justify-center gap-1 pointer-events-none select-none ${className}`.trim()}
+    className={`bg-white/95 backdrop-blur-[10px] rounded-[16px] px-5 py-3.5 shadow-xl border border-white/40 text-left min-w-[220px] flex flex-col justify-center gap-1.5 cursor-default ${className}`.trim()}
   >
     <h4 className="text-[16px] font-medium text-[#242528] leading-[1.2]">
       UI/UX Design
     </h4>
-    <div className="flex items-center gap-1.5 text-[12px] leading-[1.6] text-[#82868E] font-normal">
+    <div className="flex items-center gap-1.5 text-[12px] leading-[1.4] text-[#82868E] font-normal whitespace-nowrap">
       <span>200 Courses</span>
       <span>•</span>
       <span>1000+ Students</span>
@@ -18,7 +18,7 @@ export const UiUxCard = ({ className = "" }: { className?: string }) => (
 
 export const ProgressCard = ({ className = "" }: { className?: string }) => (
   <div
-    className={`bg-white/95 backdrop-blur-[10px] rounded-[16px] p-4 shadow-xl border border-white/40 text-left w-[232px] h-[131px] flex flex-col justify-between pointer-events-none select-none ${className}`.trim()}
+    className={`bg-white/95 backdrop-blur-[10px] rounded-[16px] p-4 shadow-xl border border-white/40 text-left w-[232px] h-[131px] flex flex-col justify-between cursor-default ${className}`.trim()}
   >
     <h4 className="text-[14px] font-medium text-[#242528] leading-[1.2]">
       Learning Progress
@@ -50,7 +50,7 @@ export const HappyStudentsCard = ({
 
   return (
     <div
-      className={`bg-white/95 backdrop-blur-[10px] rounded-[16px] p-4 shadow-xl border border-white/40 text-left w-[258px] h-[121px] flex flex-col justify-between pointer-events-none select-none ${className}`.trim()}
+      className={`bg-white/95 backdrop-blur-[10px] rounded-[16px] p-4 shadow-xl border border-white/40 text-left w-[258px] h-[121px] flex flex-col justify-between cursor-default ${className}`.trim()}
     >
       {/* Title */}
       <h4 className="text-[16px] font-medium text-[#242528] leading-[1.2]">
