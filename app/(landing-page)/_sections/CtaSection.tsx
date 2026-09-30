@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { H2, Paragraph } from "@/app/components/Typography";
 import GridBackground from "@/app/components/GridBackground";
+import Container from "@/app/components/Container";
 
 export const CtaSection = () => {
     return (
@@ -89,13 +90,13 @@ export const CtaSection = () => {
             </div>
 
             {/* Centered Content */}
-            <div className="relative z-10 max-w-6xl mx-auto px-6 text-center space-y-10">
-                <H2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-semibold   leading-[1.2]">
+            <Container className="relative z-10 text-center space-y-10">
+                <H2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-semibold leading-[1.2]">
                     Unlock Your Potential as a <br className="hidden sm:inline" />
                     Creator with ByteSpace
                 </H2>
 
-                <Paragraph className="text-white/85 text-base sm:text-lg leading-6 max-w-7xl mx-auto font-normal">
+                <Paragraph className="text-white/85 text-base sm:text-lg leading-6 max-w-4xl mx-auto font-normal">
                     Experience the collaboration of numerous creators and an expanding selection of courses. Register now and become a part of a community comprising over 10,000 local and international creators. Utilize our Course Editor, and showcase your expertise by publishing your finest course on the ByteSpace Course Library.
                 </Paragraph>
 
@@ -107,7 +108,7 @@ export const CtaSection = () => {
                         Join as Creator
                     </Link>
                 </div>
-            </div>
+            </Container>
         </section>
     );
 };

@@ -52,7 +52,7 @@ export const CourseCard = ({
     return (
         <Link
             href={courseHref}
-            className={`group bg-white rounded-[24px] p-4 border border-[#CED0D3] hover:border-zinc-400 transition-all flex flex-col justify-between shadow-xs hover:shadow-md cursor-pointer block ${className}`.trim()}
+            className={`group bg-white rounded-[24px] p-4 border border-[#d3cece76] hover:border-zinc-100 transition-all flex flex-col justify-between shadow-xs hover:shadow-md cursor-pointer block ${className}`.trim()}
         >
             {/* Thumbnail Container with Figma 12px Radius & Frosted Pills */}
             <div>

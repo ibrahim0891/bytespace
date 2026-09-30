@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import GridBackground from "@/app/components/GridBackground";
+import Container from "@/app/components/Container";
 import HeroSearch from "../_component/HeroSearch";
 import HeroVisuals from "../_component/HeroVisuals";
 import Navbar from "@/app/components/Navbar";
@@ -16,8 +17,8 @@ export const HeroSection = () => {
       {/* Reusable Grid Pattern Background (120px step, 12% opacity) */}
       <GridBackground gridSize="120px 120px" opacity={12} lineColor="#FFFFFF" />
 
-      {/* Hero Content Container (Figma: width 1200px, top 169px, gap 60px) */}
-      <div className="relative max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-0 text-center z-10 pt-4 sm:pt-8 flex flex-col items-center gap-10 sm:gap-14">
+      {/* Hero Content Container */}
+      <Container className="relative text-center z-10 pt-4 sm:pt-8 flex flex-col items-center gap-10 sm:gap-14">
         {/* Frame 1: Title + Subtitle Block (width 935px, gap 32px) */}
         <div className="w-full max-w-[935px] mx-auto flex flex-col items-center gap-6 sm:gap-8">
           {/* Heading L: Poppins 600, 72px, 120%, -0.01em, #FFFFFF */}
@@ -54,7 +55,7 @@ export const HeroSection = () => {
 
         {/* Hero Visuals with 3D Shapes, Arch Ring, Center Figure and Floating Badges */}
         <HeroVisuals />
-      </div>
+      </Container>
     </section>
   );
 };

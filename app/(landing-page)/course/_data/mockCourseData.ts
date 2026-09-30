@@ -71,7 +71,7 @@ export const defaultCourseData = {
   pricePeriod: "/lifetime",
   videoThumbnail: "/course-preview.jpg",
   videoDuration: "24 hours",
-  videoUrl: "https://youtu.be/dQw4w9WgXcQ?si=RqfaMPkuGUN4wSAI",
+  videoUrl: "https://youtu.be/9btDaOcfIMY?si=JSHHQY8Z-EIpMdhD",
   totalLessons: 112,
   totalHours: 24,
   features: [

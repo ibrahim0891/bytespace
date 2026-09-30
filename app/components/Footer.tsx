@@ -3,11 +3,12 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Container from "@/app/components/Container";
 
 export const Footer = () => {
   return (
     <footer className="w-full bg-white border-t border-[#ced0d366]">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-0 pt-16 sm:pt-[71px] pb-8 sm:pb-10">
+      <Container className="pt-16 sm:pt-[71px] pb-8 sm:pb-10">
         {/* Main Content Area */}
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-12 lg:gap-[92px]">
           {/* Brand & Newsletter Column (Left: 528px) */}
@@ -164,7 +165,7 @@ export const Footer = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 };

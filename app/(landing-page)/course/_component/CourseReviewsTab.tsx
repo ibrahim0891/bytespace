@@ -151,10 +151,10 @@ export const CourseReviewsTab: React.FC<CourseReviewsTabProps> = ({
                 />
               </div>
 
-              {/* 5 Stars Display */}
+              {/* Stars Display (decreases with row.stars: 5, 4, 3, 2, 1) */}
               <div className="flex items-center gap-1 shrink-0">
                 {[...Array(5)].map((_, i) => (
-                  <StarIcon key={i} className="w-5 h-5" filled={true} />
+                  <StarIcon key={i} className="w-5 h-5" filled={i < row.stars} />
                 ))}
               </div>
 

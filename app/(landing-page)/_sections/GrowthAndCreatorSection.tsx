@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Container from "@/app/components/Container";
 
 const stats = [
   { value: "12K", label: "Students" },
@@ -74,18 +75,18 @@ export const GrowthAndCreatorSection = () => {
       />
 
       {/* Frame 16: Main Content Container */}
-      <div className="relative z-10 max-w-[1258px] mx-auto px-4 sm:px-6 lg:px-0 flex flex-col gap-16 lg:gap-[72px]">
+      <Container className="relative z-10 flex flex-col gap-16 lg:gap-[72px]">
         {/* Frame 13: Block 1 - Professional Growth */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-[63px]">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 xl:gap-[63px]">
           {/* Left Text Block */}
-          <div className="w-full lg:w-[574px] flex flex-col items-start gap-8 lg:gap-10">
+          <div className="w-full lg:flex-1 lg:max-w-[574px] flex flex-col items-start gap-8 lg:gap-10">
             {/* Heading M */}
-            <h2 className="w-full lg:w-[577px] font-semibold text-3xl sm:text-4xl lg:text-[44px] leading-[1.2] tracking-[-0.01em] text-[#242528]">
+            <h2 className="w-full font-semibold text-3xl sm:text-4xl lg:text-[44px] leading-[1.2] tracking-[-0.01em] text-[#242528]">
               Your Path to Professional Growth Starts Here!
             </h2>
 
             {/* Body L */}
-            <p className="w-full lg:w-[477px] font-normal text-base sm:text-[18px] leading-[1.6] text-[#4B4C53]">
+            <p className="w-full lg:max-w-[477px] font-normal text-base sm:text-[18px] leading-[1.6] text-[#4B4C53]">
               Explore our curated selection of courses tailored to enhance your capabilities and accelerate your career journey. Whether you are looking to sharpen specific skills, gain industry expertise, or embark on a new career path entirely, we have the resources you need.
             </p>
 
@@ -105,7 +106,7 @@ export const GrowthAndCreatorSection = () => {
           </div>
 
           {/* Right Visual Image (Frame 11) */}
-          <div className="w-full lg:w-[621px] flex justify-center items-center">
+          <div className="w-full lg:flex-1 lg:max-w-[621px] flex justify-center items-center">
             <div className="relative w-full max-w-[621px]">
               <Image
                 src="/ByteSpace New Check website (Copy)/Frame 11.png"
@@ -120,9 +121,9 @@ export const GrowthAndCreatorSection = () => {
         </div>
 
         {/* Frame 14: Block 2 - Create & Manage Courses */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-[79px]">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 xl:gap-[79px]">
           {/* Left Visual Image (Frame 12) */}
-          <div className="w-full lg:w-[541px] flex justify-center items-center order-2 lg:order-1">
+          <div className="w-full lg:flex-1 lg:max-w-[541px] flex justify-center items-center order-2 lg:order-1">
             <div className="relative w-full max-w-[541px]">
               <Image
                 src="/ByteSpace New Check website (Copy)/Frame 12.png"
@@ -136,14 +137,14 @@ export const GrowthAndCreatorSection = () => {
           </div>
 
           {/* Right Text Block */}
-          <div className="w-full lg:w-[580px] flex flex-col items-start gap-8 lg:gap-10 order-1 lg:order-2">
+          <div className="w-full lg:flex-1 lg:max-w-[580px] flex flex-col items-start gap-8 lg:gap-10 order-1 lg:order-2">
             {/* Heading M */}
-            <h2 className="w-full lg:w-[391px] font-semibold text-3xl sm:text-4xl lg:text-[44px] leading-[1.2] tracking-[-0.01em] text-[#242528]">
+            <h2 className="w-full lg:max-w-[391px] font-semibold text-3xl sm:text-4xl lg:text-[44px] leading-[1.2] tracking-[-0.01em] text-[#242528]">
               Create &amp; Manage Courses Easily.
             </h2>
 
             {/* Body L Bold */}
-            <p className="w-full lg:w-[574px] font-bold text-base sm:text-[18px] leading-[1.56] text-[#242528]">
+            <p className="w-full lg:max-w-[574px] font-bold text-base sm:text-[18px] leading-[1.56] text-[#242528]">
               ByteSpace supports individuals or entities in the creation, publication, and administration of educational courses.
             </p>
 
@@ -175,7 +176,7 @@ export const GrowthAndCreatorSection = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

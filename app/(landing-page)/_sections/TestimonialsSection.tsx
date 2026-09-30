@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Container from "@/app/components/Container";
 
 interface TestimonialItem {
   name: string;
@@ -72,27 +73,27 @@ export const TestimonialsSection = () => {
         }}
       />
 
-      {/* Content Container (Figma: width 1204px, gap 72px) */}
-      <div className="relative z-10 max-w-[1204px] mx-auto px-4 sm:px-6 lg:px-0 flex flex-col gap-12 lg:gap-[72px]">
-        {/* Header Text Block (Figma: width 1200px, height 145px, gap 43px, items-end) */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 lg:gap-[43px]">
-          {/* Discover What Our Community Is Saying (Figma: 577px, Poppins 600, 44px, 120%, -0.01em, #000000) */}
-          <h2 className="lg:w-[577px] shrink-0 font-semibold text-3xl sm:text-4xl lg:text-[44px] leading-[1.2] tracking-[-0.01em] text-[#000000]">
+      {/* Content Container */}
+      <Container className="relative z-10 flex flex-col gap-12 lg:gap-[72px]">
+        {/* Header Text Block */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 lg:gap-8 xl:gap-[43px]">
+          {/* Discover What Our Community Is Saying */}
+          <h2 className="w-full lg:max-w-[540px] font-semibold text-3xl sm:text-4xl lg:text-[44px] leading-[1.2] tracking-[-0.01em] text-[#000000]">
             Discover What Our Community Is Saying
           </h2>
 
-          {/* Subtitle / Description (Figma: 580px, Satoshi/Sans 400, 18px, 160%, #4F4F4F) */}
-          <p className="lg:w-[580px] shrink-0 font-normal text-base sm:text-[18px] leading-[1.6] text-[#4F4F4F]">
+          {/* Subtitle / Description */}
+          <p className="w-full lg:max-w-[560px] font-normal text-base sm:text-[18px] leading-[1.6] text-[#4F4F4F]">
             At ByteSpace, our vibrant community of learners and creators is at the heart of what we do. Hear directly from those who have experienced the transformative journey of learning and creating on our platform. Explore testimonials that reflect the diverse perspectives of enthusiastic learners and accomplished creators.
           </p>
         </div>
 
-        {/* Testimonial Cards Grid (Figma: width 1204px, gap 41px) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-[41px]">
+        {/* Testimonial Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-6 xl:gap-[41px]">
           {testimonials.map((t, idx) => (
             <div
               key={idx}
-              className="w-full lg:w-[374px] bg-[#FFFFFF] rounded-[24px] p-6 flex flex-col items-start gap-6 shadow-xs hover:shadow-md transition-shadow duration-300"
+              className="w-full bg-[#FFFFFF] rounded-[24px] p-6 flex flex-col items-start gap-6 shadow-xs hover:shadow-md transition-shadow duration-300"
             >
               {/* Ellipse Avatar: 80x80 */}
               <div className="relative w-20 h-20 rounded-full overflow-hidden shrink-0 bg-zinc-100">
@@ -124,7 +125,7 @@ export const TestimonialsSection = () => {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

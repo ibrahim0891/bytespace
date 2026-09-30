@@ -55,7 +55,7 @@ export const CourseContentSection: React.FC<CourseContentSectionProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           {/* Left Main Content: Tabs & Details (7 Columns to match Video Player) */}
-          <div className="lg:col-span-9 pt-7 space-y-7">
+          <div className="lg:col-span-8 pt-7 space-y-7">
             {/* Tab Navigation */}
             <CourseTabs activeTab={activeTab} onSelectTab={setActiveTab} />
 
