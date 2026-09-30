@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ShoppingBag, Menu, X } from "lucide-react";
+import Container from "./Container";
 
 interface NavbarProps {
   className?: string;
@@ -36,7 +37,7 @@ export const Navbar = ({
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       className={`w-full z-50 ${className}`.trim()}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-[120px] flex items-center justify-between relative">
+      <Container size="large" className="h-20 sm:h-[120px] flex items-center justify-between relative">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
           <Image
@@ -120,7 +121,7 @@ export const Navbar = ({
             )}
           </button>
         </div>
-      </div>
+      </Container>
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (

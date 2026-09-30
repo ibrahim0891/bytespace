@@ -4,6 +4,7 @@ import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import CourseCard from "@/app/components/CourseCard";
+import Container from "@/app/components/Container";
 import { allCoursesList } from "@/app/data/courses";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
@@ -67,7 +68,7 @@ export const DiscoverSection = () => {
 
   return (
     <section className="w-full bg-[#FFFFFF] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-28">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-0 flex flex-col items-center gap-10 sm:gap-12 lg:gap-[42px]">
+      <Container className="flex flex-col items-center gap-10 sm:gap-12 lg:gap-[42px]">
         {/* Header Block */}
         <div className="w-full max-w-[917px] mx-auto flex flex-col items-center text-center gap-4">
           <h2 className="w-full max-w-[588px] font-semibold text-3xl sm:text-4xl lg:text-[44px] leading-[1.2] tracking-[-0.01em] text-[#040819]">
@@ -196,7 +197,7 @@ export const DiscoverSection = () => {
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

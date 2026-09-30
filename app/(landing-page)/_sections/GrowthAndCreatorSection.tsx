@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Container from "@/app/components/Container";
 
 const stats = [
   { value: "12K", label: "Students" },
@@ -74,7 +75,7 @@ export const GrowthAndCreatorSection = () => {
       />
 
       {/* Frame 16: Main Content Container */}
-      <div className="relative z-10 max-w-[1258px] mx-auto px-4 sm:px-6 lg:px-0 flex flex-col gap-16 lg:gap-[72px]">
+      <Container className="relative z-10 flex flex-col gap-16 lg:gap-[72px]">
         {/* Frame 13: Block 1 - Professional Growth */}
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-[63px]">
           {/* Left Text Block */}
@@ -175,7 +176,7 @@ export const GrowthAndCreatorSection = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Container from "@/app/components/Container";
 
 interface TestimonialItem {
   name: string;
@@ -72,8 +73,8 @@ export const TestimonialsSection = () => {
         }}
       />
 
-      {/* Content Container (Figma: width 1204px, gap 72px) */}
-      <div className="relative z-10 max-w-[1204px] mx-auto px-4 sm:px-6 lg:px-0 flex flex-col gap-12 lg:gap-[72px]">
+      {/* Content Container */}
+      <Container className="relative z-10 flex flex-col gap-12 lg:gap-[72px]">
         {/* Header Text Block (Figma: width 1200px, height 145px, gap 43px, items-end) */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 lg:gap-[43px]">
           {/* Discover What Our Community Is Saying (Figma: 577px, Poppins 600, 44px, 120%, -0.01em, #000000) */}
@@ -124,7 +125,7 @@ export const TestimonialsSection = () => {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

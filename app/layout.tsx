@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import "lenis/dist/lenis.css";
 import "./globals.css";
+import SmoothScroll from "@/app/components/SmoothScroll";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -32,7 +34,9 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} font-sans h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col font-sans">
+        <SmoothScroll>{children}</SmoothScroll>
+      </body>
     </html>
   );
 }

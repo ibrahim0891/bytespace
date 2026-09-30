@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Container from "@/app/components/Container";
 
 const logos = [
   { src: "/logoipusum/Frame.png", alt: "Logoipsum Partner 1" },
@@ -10,8 +11,8 @@ const logos = [
 
 export const BrandSection = () => {
   return (
-    <section className="w-full bg-[#F4F4F6] py-10 sm:py-20  border-zinc-200/70 dark:border-zinc-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-[#F4F4F6] py-10 sm:py-20 border-zinc-200/70 dark:border-zinc-800">
+      <Container>
         <div className="flex flex-wrap items-center justify-center sm:justify-between gap-8 sm:gap-12 md:gap-16">
           {logos.map((logo, index) => (
             <div
@@ -28,7 +29,7 @@ export const BrandSection = () => {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

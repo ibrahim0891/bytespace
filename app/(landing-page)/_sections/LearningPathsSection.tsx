@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Container from "@/app/components/Container";
 
 interface LearningPathItem {
   name: string;
@@ -44,7 +45,7 @@ const learningPaths: LearningPathItem[] = [
 export const LearningPathsSection = () => {
   return (
     <section className="w-full bg-[#FFFFFF] py-16 sm:py-20 lg:py-24">
-      <div className="max-w-[1202px] mx-auto px-4 sm:px-6 lg:px-0 flex flex-col items-center gap-12 sm:gap-14 lg:gap-[68px]">
+      <Container className="flex flex-col items-center gap-12 sm:gap-14 lg:gap-[68px]">
         {/* Frame 9: Header Block (width: 917px, gap: 16px, center aligned) */}
         <div className="w-full max-w-[917px] mx-auto flex flex-col items-center text-center gap-4">
           {/* Heading S: Poppins 600, 36px, 120%, -0.01em, #040819 */}
@@ -84,7 +85,7 @@ export const LearningPathsSection = () => {
             </Link>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };
