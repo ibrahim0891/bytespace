@@ -93,38 +93,48 @@ export const CourseHeroSection: React.FC<CourseHeroSectionProps> = ({
                             </Link>
                         </motion.div>
 
-                        {/* Metadata Badges */}
+                        {/* Metadata Badges & Mobile Share */}
                         <motion.div
                             initial={{ opacity: 0, y: 15 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
-                            className="flex flex-wrap items-center gap-4 pt-2"
+                            className="flex flex-wrap items-center gap-2 sm:gap-3 lg:gap-4 pt-1 sm:pt-2"
                         >
-                            <div className="h-10 px-6 py-2 rounded-[24px] bg-white text-[#242528] text-sm sm:text-base font-medium inline-flex items-center gap-2 backdrop-blur-[20px] shadow-sm">
-                                <Signal className="w-5 h-5 text-[#003BE2]" />
+                            <div className="h-9 sm:h-10 px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full bg-white text-[#242528] text-xs sm:text-sm md:text-base font-medium inline-flex items-center gap-1.5 sm:gap-2 backdrop-blur-[20px] shadow-sm shrink-0">
+                                <Signal className="w-4 h-4 sm:w-5 sm:h-5 text-[#003BE2]" />
                                 <span>{level}</span>
                             </div>
 
-                            <div className="h-10 px-6 py-2 rounded-[24px] bg-white text-[#242528] text-sm sm:text-base font-medium inline-flex items-center gap-2 backdrop-blur-[20px] shadow-sm">
-                                <Star className="w-5 h-5 text-[#003BE2] fill-[#003BE2]" />
+                            <div className="h-9 sm:h-10 px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full bg-white text-[#242528] text-xs sm:text-sm md:text-base font-medium inline-flex items-center gap-1.5 sm:gap-2 backdrop-blur-[20px] shadow-sm shrink-0">
+                                <Star className="w-4 h-4 sm:w-5 sm:h-5 text-[#003BE2] fill-[#003BE2]" />
                                 <span>
                                     {rating} ({reviewCount} reviews)
                                 </span>
                             </div>
 
-                            <div className="h-10 px-6 py-2 rounded-[24px] bg-white text-[#242528] text-sm sm:text-base font-medium inline-flex items-center gap-2 backdrop-blur-[20px] shadow-sm">
-                                <Users className="w-5 h-5 text-[#003BE2]" />
+                            <div className="h-9 sm:h-10 px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full bg-white text-[#242528] text-xs sm:text-sm md:text-base font-medium inline-flex items-center gap-1.5 sm:gap-2 backdrop-blur-[20px] shadow-sm shrink-0">
+                                <Users className="w-4 h-4 sm:w-5 sm:h-5 text-[#003BE2]" />
                                 <span>{studentsCount} Students</span>
                             </div>
+
+                            {/* Mobile Share Button inline with badges */}
+                            <button
+                                type="button"
+                                onClick={handleShare}
+                                className="lg:hidden h-9 sm:h-10 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-[#D4FB20] hover:bg-[#c6f000] text-[#242528] text-xs sm:text-sm md:text-base font-medium inline-flex items-center gap-1.5 sm:gap-2 backdrop-blur-[20px] shadow-sm transition-all active:scale-95 cursor-pointer shrink-0"
+                            >
+                                <Share2 className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2] text-[#242528]" />
+                                <span>Share</span>
+                            </button>
                         </motion.div>
                     </div>
 
-                    {/* Share Button (Top Right) */}
+                    {/* Desktop Share Button (Top Right on lg+) */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.4 }}
-                        className="lg:self-start shrink-0"
+                        className="hidden lg:block lg:self-start shrink-0"
                     >
                         <button
                             type="button"
