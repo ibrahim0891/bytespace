@@ -23,7 +23,7 @@ export const Navbar = ({
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Courses", href: "/search" },
-    { label: "Creators", href: "#creators" },
+    { label: "Creators", href: "/creators" },
   ];
 
   const isLight = variant === "light";
