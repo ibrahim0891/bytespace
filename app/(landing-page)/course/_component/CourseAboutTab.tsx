@@ -40,11 +40,11 @@ export const CourseAboutTab: React.FC<CourseAboutTabProps> = ({
     >
       {/* 1. Description Header & Paragraphs */}
       <div className="flex flex-col gap-6">
-        <h3 className="font-semibold text-[20px] leading-[1.2] tracking-[-0.01em] text-[#242528]">
+        <h3 className="font-semibold text-xl leading-tight tracking-tight text-heading">
           Description
         </h3>
 
-        <div className="flex flex-col gap-4 text-[16px] leading-[1.6] text-[#4B4C53]">
+        <div className="flex flex-col gap-4 text-base leading-relaxed text-body">
           {descriptionParagraphs.map((para, idx) => (
             <p key={idx}>{para}</p>
           ))}
@@ -53,7 +53,7 @@ export const CourseAboutTab: React.FC<CourseAboutTabProps> = ({
 
       {/* 2. Sneak Peak Gallery */}
       <div className="flex flex-col gap-6 pt-2">
-        <h3 className="font-semibold text-[20px] leading-[1.2] tracking-[-0.01em] text-[#242528]">
+        <h3 className="font-semibold text-xl leading-tight tracking-tight text-heading">
           Sneak Peak
         </h3>
 
@@ -61,7 +61,7 @@ export const CourseAboutTab: React.FC<CourseAboutTabProps> = ({
           {sneakPeakImages.map((imgSrc, idx) => (
             <div
               key={idx}
-              className="relative w-full aspect-[4/3] rounded-[16px] overflow-hidden bg-[#D9D9D9] border border-zinc-200/50 shadow-xs"
+              className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-200 border border-zinc-200/50 shadow-xs"
             >
               <Image
                 src={imgSrc}
@@ -77,15 +77,15 @@ export const CourseAboutTab: React.FC<CourseAboutTabProps> = ({
 
       {/* 3. Key Points List */}
       <div className="flex flex-col gap-4 pt-2">
-        <h3 className="font-semibold text-[20px] leading-[1.2] tracking-[-0.01em] text-[#242528]">
+        <h3 className="font-semibold text-xl leading-tight tracking-tight text-heading">
           Key Points
         </h3>
 
         <div className="flex flex-col gap-3">
           {keyPoints.map((point, idx) => (
             <div key={idx} className="flex items-center gap-2">
-              <CheckCircle2 className="w-6 h-6 text-[#003BE2] fill-[#003BE2] stroke-white shrink-0" />
-              <span className="font-normal text-[16px] leading-[1.6] text-[#4B4C53]">
+              <CheckCircle2 className="w-6 h-6 text-brand-blue fill-brand-blue stroke-white shrink-0" />
+              <span className="font-normal text-base leading-relaxed text-body">
                 {point}
               </span>
             </div>

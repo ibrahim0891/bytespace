@@ -3,8 +3,16 @@
 @theme inline {
   --font-sans: var(--font-poppins), sans-serif;
   --font-poppins: var(--font-poppins), sans-serif;
+
+  /* Brand & UI Colors */
+  --color-brand-blue: #003be2;
+  --color-brand-lime: #d4fb20;
+  --color-heading: #242528;
+  --color-body: #4b4c53;
+  --color-muted-border: #e4e4e7;
 }
 
 body {
   font-family: var(--font-poppins), sans-serif;
+  color: var(--color-heading);
 }
