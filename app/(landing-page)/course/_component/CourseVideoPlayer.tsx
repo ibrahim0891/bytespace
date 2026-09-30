@@ -39,7 +39,7 @@ export const CourseVideoPlayer: React.FC<CourseVideoPlayerProps> = ({
         <button
           type="button"
           aria-label="Play course preview"
-          className="box-border flex flex-row justify-center items-center p-4 gap-2 w-[104px] h-[104px] rounded-[24px] bg-[rgba(61,61,61,0.24)] border border-[#4F4F4F] backdrop-blur-[20px] text-[#F5F2FF] shadow-2xl transition-all duration-300 group-hover:scale-105 group-hover:bg-[rgba(61,61,61,0.36)] active:scale-95 cursor-pointer"
+          className="box-border flex flex-row justify-center items-center p-4 gap-2 w-[104px] h-[104px] rounded-full bg-[rgba(61,61,61,0.24)] border border-[#4F4F4F] backdrop-blur-[20px] text-[#F5F2FF] shadow-2xl transition-all duration-300 group-hover:scale-105 group-hover:bg-[rgba(61,61,61,0.36)] active:scale-95 cursor-pointer"
         >
           {/* Frame: 72x72px */}
           <div className="relative w-[72px] h-[72px] flex-none order-0 flex-grow-0 flex items-center justify-center">
